@@ -4,7 +4,6 @@ body {
   font-family: serif;
   font-style: italic;
   font-size: 1.5em;
-  padding: 2em; /* I'm not even sure this actually does something... */
 }
 
 #thebox {
@@ -16,4 +15,5 @@ body {
   position: fixed;
   max-width: 30%;
   padding: 0.5em;
+  margin: 0.5em;
 }

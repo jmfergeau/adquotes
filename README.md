@@ -26,8 +26,8 @@ Simply replace the quotes you want with your text. To add more quotes (as many a
 
 To change the interval between the quotes, find the line like below in `ad-messages.js`:
 ```
-// Put here the number of miliseconds you want for the quotes to change. By defautl, it's 10 seconds, so it's 10000.
+// Put here the number of milliseconds you want for the quotes to change. By default, it's 10 seconds, so it's 10000.
 var secs = 10000;
 ```
 
-And simply replace the number with the time you want. It's in miliseconds so just add `000` after the number you want. For instance, for 15 seconds, type `15000`.
+And simply replace the number with the time you want. It's in milliseconds so just add `000` after the number you want. For instance, for 15 seconds, type `15000`.
