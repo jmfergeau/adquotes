@@ -7,7 +7,7 @@ var borderStyle = "random";
 
 // Put here the desired color of borders for the quotes box.
 // Can be any HTML color code like "#FF0000" or "red".
-// Pur "random" for random colors.
+// Put "random" for random colors.
 var borderColor = "random";
 
 // These lines are the quotes the script will randomly choose. You can put as much as you want.
