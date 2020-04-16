@@ -1,34 +1,53 @@
-window.setInterval(function() {
-  // puts a preselection of styles for the border Originally, there's only those 3 ones.
-  var borderStylesArray = ["none", "solid", "double"];
+function adquote() {
+  // Like,
+  // puts a preselection of styles for the border.
+  // Originally, there's more than these 3 ones but we kept that simple to avoid making the code more heavy.
+  var 
+    borderStylesArray = ["none", "solid", "double"],
 
-  // If random, selects randomly a style from the preselection. Else, it takes the one choosen by the user.
-  if (borderStyle == "random") {
-    var borderStyleSelect = document.getElementById('thebox').style.borderStyle = borderStylesArray[getRandomInt(0, borderStylesArray.length - 1)];
-  } else {
-    var borderStyleSelect = document.getElementById('thebox').style.borderStyle = borderStyle;
+  // Puts a preselection of colors for the original random.
+    borderOrigColors = ["#FF0000","#00FFFF","#FF00FF","#0000FF","#FFFF00","#00FF00"],
+
+  // ...or some junk.
+    theBox = document.getElementById('thebox');
+
+  if (borderStyle == "random") { // If random, selects randomly a style from the preselection but ignores the first option "none".
+    var borderStyleSelect = theBox.style.borderStyle = borderStylesArray[getRandomInt(1, borderStylesArray.length - 1)];
+  } else if (borderStyle == "fullrandom") { // If fullrandom, selects from the whole array.
+    var borderStyleSelect = theBox.style.borderStyle = borderStylesArray[getRandomInt(0, borderStylesArray.length - 1)];
+  } else { // Else, it takes the one choosen by the user.
+    var borderStyleSelect = theBox.style.borderStyle = borderStyle;
   }
 
-  // If random, selects randomly a color from the preselection. Else, it takes the one choosen by the user. I use rgb to make the color randomisation easier.
-  if (borderColor == "random") {
-    var borderColorSelect = document.getElementById('thebox').style.borderColor = "rgb("+getRandomInt(0, 255)+", "+getRandomInt(0, 255)+", "+getRandomInt(0, 255)+")";
-  } else {
-    var borderColorSelect = document.getElementById('thebox').style.borderStyle = borderColor;
+  if (borderColor == "original") { // If original, selects randomly a color from the preselection.
+    var borderColorSelect = theBox.style.borderColor = borderOrigColors[getRandomInt(0, borderOrigColors.length - 1)];
+  } else if (borderColor == "random") { // If random, generates a fully random color using the rgb() css feature.
+    var borderColorSelect = theBox.style.borderColor = "rgb("+getRandomInt(0, 255)+", "+getRandomInt(0, 255)+", "+getRandomInt(0, 255)+")";
+  } else { // Else, it takes the one choosen by the user.
+    var borderColorSelect = theBox.style.borderColor = borderColor;
   }
 
   // This is the array that will be returned to actually put the quotes and the settings
   var arr = [
     borderStyleSelect,
     borderColorSelect,
-    document.getElementById('thebox').style.left = getRandomInt(20, 80)+"%",
-    document.getElementById('thebox').style.top = getRandomInt(25, 75)+"%",
-    document.getElementById('thebox').innerHTML = strings[getRandomInt(0, strings.length - 1)]
+    theBox.style.fontFamily = fontStyle,
+    theBox.style.fontSize = fontSize,
+    theBox.style.left = getRandomInt(0, 75)+"%",
+    theBox.style.top = getRandomInt(0, 75)+"%",
+    theBox.innerHTML = quotes[getRandomInt(0, quotes.length - 1)]
   ];
 
   return arr
-}, secs);
+};
 
 // Randomisator
 function getRandomInt(min, max) {
-  return Math.floor(Math.random() * Math.floor(max));
+  return Math.floor(Math.random() * Math.floor(max) + min);
+};
+
+// This will launch the whole shbang
+window.onload = function() {
+  adquote();
+  setInterval(adquote, secs);
 };

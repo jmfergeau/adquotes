@@ -1,19 +1,11 @@
 body {
   background-color: black;
   color: white;
-  font-family: serif;
-  font-style: italic;
-  font-size: 1.5em;
+  margin: 1em;
 }
 
 #thebox {
-  border-style: double;   /* Default. Changes via JS */
-  border-color: red;      /* Default. Changes via JS */
-  border-width: 6px;
-  top: 30%;               /* Default. Changes via JS */
-  left: 30%;              /* Default. Changes via JS */
+  border-width: 1px;
   position: fixed;
-  max-width: 30%;
-  padding: 0.5em;
-  margin: 0.5em;
+  padding: 0.15em;
 }
