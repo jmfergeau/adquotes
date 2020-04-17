@@ -46,6 +46,26 @@ function getRandomInt(min, max) {
   return Math.floor(Math.random() * Math.floor(max) + min);
 };
 
+// STUFF FOR BEFORE DAWN
+// Fetches the parameters in the query url.
+var tmpParams = new URLSearchParams(document.location.search);
+window.urlParams = {};
+
+for(let k of tmpParams.keys() ) {
+  window.urlParams[k] = tmpParams.get(k);
+}
+
+// If the parameter secs 'exists' (which is normally the case in beforedawn),
+// it replaces the variables previously set by the ones set in beforedawn.
+if (window.urlParams['secs'] != null) {
+  var
+    secs = window.urlParams['secs']*1000,
+    borderStyle = window.urlParams['borderStyle'],
+    borderColor = window.urlParams['borderColor'],
+    fontStyle = window.urlParams['fontStyle'],
+    fontSize = window.urlParams['fontSize']+"em";
+};
+
 // This will launch the whole shbang
 window.onload = function() {
   adquote();
