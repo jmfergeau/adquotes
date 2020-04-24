@@ -1,8 +1,8 @@
 var
-  // Put here the number of miliseconds you want for the quotes to change. 
-  // Emulates the "Show Every" option of the original.
-  // By default, it's 10 seconds, so it's 10000.
-  secs = 10000,
+  // Put here the number of seconds you want for the quotes to change. 
+  // Emulates the "Show Every" option of the original. Min was 10, max was 100.
+  // Default is 10 seconds.
+  secs = 10,
 
   // Put here the style of desired borders for the quotes box.
   // Somewhat emulates the "Draw Border" option of the original.

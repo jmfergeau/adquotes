@@ -59,7 +59,7 @@ for(let k of tmpParams.keys() ) {
 // it replaces the variables previously set by the ones set in beforedawn.
 if (window.urlParams['secs'] != null) {
   var
-    secs = window.urlParams['secs']*1000,
+    secs = window.urlParams['secs'],
     borderStyle = window.urlParams['borderStyle'],
     borderColor = window.urlParams['borderColor'],
     fontStyle = window.urlParams['fontStyle'],
@@ -69,5 +69,5 @@ if (window.urlParams['secs'] != null) {
 // This will launch the whole shbang
 window.onload = function() {
   adquote();
-  setInterval(adquote, secs);
+  setInterval(adquote, secs*1000);
 };
