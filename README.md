@@ -6,11 +6,7 @@ Of course, like the original, quotes and time between quotes can be changed. Som
 You can check out a sample of it [here](https://maxlefou.gitlab.io/adquotes/).
 
 ## Using it with Before Dawn
-- Download the source code.
-- Put it inside a folder in the folder that holds your screensavers.
-- To edit the quotes used, open the file `quotes.js` and follow the instructions.
-- Open Before Dawn settings and select the "Say No More" screensaver.
-- You can change the settings in the Before Dawn window.
+This screensaver is already bundled in Before Dawn! Just select "Say No More" in the program's window.
 
 ## Using it as standalone web page
 - To edit the quotes used, open the file quotes.js and follow the instructions.
